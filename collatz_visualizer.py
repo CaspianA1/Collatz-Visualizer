@@ -8,7 +8,6 @@ def collatz(number):
 		else:
 			number = (number * 3) + 1
 		sequence.append(number)
-	print(sequence[-1])
 	return sequence
 
 def graph(y_axis, graph_type):
@@ -30,7 +29,7 @@ def disprove(sequence):
 if __name__ == "__main__":
 	sequence = collatz(int(float(input("Enter a number: "))))
 
-	if disprove(sequence) is True:
+	if disprove(sequence):
 		print("You have disproved the Collatz conjecture!")
 
 	plot_response = input("Line or scatter graph: ").lower()
